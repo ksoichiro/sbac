@@ -1,0 +1,42 @@
+import org.springframework.security.crypto.password.StandardPasswordEncoder
+
+def vJavaLang = '1.7'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${SPRING_BOOT_VERSION}"
+        classpath "org.springframework:springloaded:1.2.1.RELEASE"
+        classpath "org.springframework.boot:spring-boot-starter-security:${SPRING_BOOT_VERSION}"
+    }
+}
+
+configure(allprojects) {
+    apply plugin: 'idea'
+}
+
+configure(rootProject) {
+    idea.project {
+        languageLevel = vJavaLang
+        ipr {
+            withXml { provider ->
+                def mapping = provider.node.component.find { it.@name == 'VcsDirectoryMappings' }.mapping
+                mapping.@vcs = 'Git'
+                mapping.@directory = '$PROJECT_DIR$'
+            }
+        }
+    }
+}
+
+// e.g. ./gradlew encodePassword -Pargs="test"
+task encodePassword << {
+    StandardPasswordEncoder encoder = new StandardPasswordEncoder()
+    String username = 'test'
+    if (project.hasProperty('args')) {
+        username = project.args.split('\\s+')[0]
+    }
+    println "Encoded password for user ${username}:"
+    println encoder.encode(username)
+}
