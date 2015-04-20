@@ -42,3 +42,4 @@ task encodePassword << {
 }
 
 task stage(dependsOn: [':site:clean', ':site:build'])
+defaultTasks ':site:clean', ':site:build'
