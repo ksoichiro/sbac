@@ -22,7 +22,7 @@
     "gulp-util": "3.0.1"
   },
   "scripts": {
-    "prepublish": "bower install --config.interactive=false",
+    "prepublish": "./node_modules/bower/bin/bower install --config.interactive=false",
     "build": "gulp build",
     "clean": "gulp clean",
     "watch": "gulp watch"
