@@ -41,4 +41,4 @@ task encodePassword << {
     println encoder.encode(username)
 }
 
-defaultTasks "clean", "build"
+task stage(dependsOn: [':site:clean', ':site:build'])
