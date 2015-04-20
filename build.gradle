@@ -40,3 +40,5 @@ task encodePassword << {
     println "Encoded password for user ${username}:"
     println encoder.encode(username)
 }
+
+defaultTasks "clean", "build"
