@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery/src/ajax/var/nonce.js","names":[],"mappings":"","sources":["jquery/src/ajax/var/nonce.js"],"sourcesContent":["define([\n\t\"../../core\"\n], function( jQuery ) {\n\treturn jQuery.now();\n});\n"],"sourceRoot":"/source/"}

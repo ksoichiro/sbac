@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery/src/css/var/rnumnonpx.js","names":[],"mappings":"","sources":["jquery/src/css/var/rnumnonpx.js"],"sourcesContent":["define([\n\t\"../../var/pnum\"\n], function( pnum ) {\n\treturn new RegExp( \"^(\" + pnum + \")(?!px)[a-z%]+$\", \"i\" );\n});\n"],"sourceRoot":"/source/"}

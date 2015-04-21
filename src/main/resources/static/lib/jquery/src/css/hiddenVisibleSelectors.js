@@ -1,0 +1,2 @@
+define(["../core","./support","../selector","../css"],function(e,s){e.expr.filters.hidden=function(i){return i.offsetWidth<=0&&i.offsetHeight<=0||!s.reliableHiddenOffsets()&&"none"===(i.style&&i.style.display||e.css(i,"display"))},e.expr.filters.visible=function(s){return!e.expr.filters.hidden(s)}});
+//# sourceMappingURL=../../../jquery/src/css/hiddenVisibleSelectors.js.map

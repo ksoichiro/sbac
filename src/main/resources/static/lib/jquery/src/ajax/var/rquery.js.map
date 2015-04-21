@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery/src/ajax/var/rquery.js","names":[],"mappings":"","sources":["jquery/src/ajax/var/rquery.js"],"sourcesContent":["define(function() {\n\treturn (/\\?/);\n});\n"],"sourceRoot":"/source/"}

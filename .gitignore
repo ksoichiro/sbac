@@ -2,3 +2,7 @@
 .idea/
 build/
 *.iml
+bower_modules/
+src/main/resources/static/
+node_modules/
+npm-debug.log

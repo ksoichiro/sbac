@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery/src/selector.js","names":[],"mappings":"","sources":["jquery/src/selector.js"],"sourcesContent":["define([ \"./selector-sizzle\" ]);\n"],"sourceRoot":"/source/"}

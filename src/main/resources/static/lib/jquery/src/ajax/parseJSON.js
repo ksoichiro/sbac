@@ -1,0 +1,2 @@
+define(["../core"],function(r){var n=/(,)|(\[|{)|(}|])|"(?:[^"\\\r\n]|\\["\\\/bfnrt]|\\u[\da-fA-F]{4})*"\s*:?|true|false|null|-?(?!0\d)\d+(?:\.\d+|)(?:[eE][+-]?\d+|)/g;return r.parseJSON=function(e){if(window.JSON&&window.JSON.parse)return window.JSON.parse(e+"");var t,u=null,i=r.trim(e+"");return i&&!r.trim(i.replace(n,function(r,n,e,i){return t&&n&&(u=0),0===u?r:(t=e||n,u+=!i-!e,"")}))?Function("return "+i)():r.error("Invalid JSON: "+e)},r.parseJSON});
+//# sourceMappingURL=../../../jquery/src/ajax/parseJSON.js.map

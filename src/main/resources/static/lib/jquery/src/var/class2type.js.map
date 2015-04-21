@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery/src/var/class2type.js","names":[],"mappings":"","sources":["jquery/src/var/class2type.js"],"sourcesContent":["define(function() {\n\t// [[Class]] -> type pairs\n\treturn {};\n});\n"],"sourceRoot":"/source/"}

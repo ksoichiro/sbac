@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery/src/var/strundefined.js","names":[],"mappings":"","sources":["jquery/src/var/strundefined.js"],"sourcesContent":["define(function() {\n\treturn typeof undefined;\n});\n"],"sourceRoot":"/source/"}

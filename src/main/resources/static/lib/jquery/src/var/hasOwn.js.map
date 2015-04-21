@@ -1,0 +1,1 @@
+{"version":3,"file":"jquery/src/var/hasOwn.js","names":[],"mappings":"","sources":["jquery/src/var/hasOwn.js"],"sourcesContent":["define([\n\t\"./class2type\"\n], function( class2type ) {\n\treturn class2type.hasOwnProperty;\n});\n"],"sourceRoot":"/source/"}
