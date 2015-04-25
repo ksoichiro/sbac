@@ -1,2 +1,0 @@
-define(["../var/support"],function(n){return function(){var t,e,u=document.createElement("div");for(t in{submit:!0,change:!0,focusin:!0})e="on"+t,(n[t+"Bubbles"]=e in window)||(u.setAttribute(e,"t"),n[t+"Bubbles"]=u.attributes[e].expando===!1);u=null}(),n});
-//# sourceMappingURL=../../../jquery/src/event/support.js.map

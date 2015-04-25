@@ -1,2 +1,0 @@
-define(["../core"],function(e){return e.acceptData=function(t){var a=e.noData[(t.nodeName+" ").toLowerCase()],n=+t.nodeType||1;return 1!==n&&9!==n?!1:!a||a!==!0&&t.getAttribute("classid")===a},e.acceptData});
-//# sourceMappingURL=../../../jquery/src/data/accepts.js.map

@@ -39,6 +39,14 @@ gulp.task 'bower-files', ->
         .pipe sourcemaps.write "./"
         .pipe gulp.dest paths.dest + 'lib'
 
+    filter = gulpFilter(["**/*.min.css", "fonts/*"])
+    bowerSrc()
+        .pipe sourcemaps.init()
+        .pipe filter
+        .pipe filter.restore()
+        .pipe sourcemaps.write "./"
+        .pipe gulp.dest paths.dest + 'lib'
+
 gulp.task 'watch', ->
     gulp.watch paths.less.files, ['less']
     gulp.watch paths.coffee.files, ['coffee']

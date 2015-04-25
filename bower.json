@@ -3,7 +3,8 @@
   "description": "bower components",
   "dependencies": {
     "jquery": "1.11.2",
-    "bootstrap": "3.3.4"
+    "bootstrap": "3.3.4",
+    "components-font-awesome": "4.3.0"
   },
   "overrides": {
     "jquery": {
