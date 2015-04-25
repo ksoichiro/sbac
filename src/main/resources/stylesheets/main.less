@@ -1,10 +1,54 @@
 body {
 }
-#panel-login {
-    width: 400px;
-}
-.forgot-password {
-    margin-top: 10px;
+
+#body-login {
+    background: #2196F3;
+
+    @base_color: #fff;
+    @base_width: 400px;
+
+    p, a {
+        color: @base_color;
+    }
+
+    #panel-login {
+        background-color: #fff;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 100%;
+
+        h3, a {
+            color: #1565C0;
+        }
+        .panel-heading h3 {
+            text-align: center;
+        }
+        .panel-heading {
+            h3 {
+                margin-top: 30px;
+            }
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .panel-main {
+            width: @base_width;
+            margin: auto;
+            .login-header {
+                height: 62px;
+            }
+            .login-footer {
+                height: 80px;
+            }
+            .forgot-password {
+                margin-top: 20px;
+            }
+            #username, #password {
+                margin-bottom: 20px;
+            }
+        }
+    }
 }
 .navbar-right {
     margin-right: 10px;
