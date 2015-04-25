@@ -9,7 +9,7 @@
 
 <div class="container" layout:fragment="content">
     <div class="page-header">
-        <h1>Welcome!</h1>
+        <h1>Spring Boot Admin Console</h1>
     </div>
 
     <div class="alert alert-warning" th:if="${param.error}">Invalid username and password.</div>
@@ -28,6 +28,18 @@
             <div class="forgot-password">
                 <a href="#">Forgot password?</a>
             </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-md-8">
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy policy</a>
+        </div>
+        <div class="col-md-4">
+            <p class="muted pull-right" th:text="'© ' + #{msg.copyright.year} + ' ' + #{msg.copyright.holder} + '. All rights reserved.'">copyright</p>
         </div>
     </div>
 </div>
