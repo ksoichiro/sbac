@@ -12,13 +12,17 @@
 
     <table class="table table-striped">
         <thead>
-        <th th:text="#{model.role.id}"></th>
-        <th th:text="#{model.role.name}"></th>
+            <tr>
+                <th th:text="#{model.role.id}"></th>
+                <th th:text="#{model.role.name}"></th>
+            </tr>
         </thead>
-        <tr th:each="entity : ${roleList}">
-            <td th:text="${entity.id}"></td>
-            <td th:text="${entity.name}"></td>
-        </tr>
+        <tbody>
+            <tr th:each="entity : ${roleList}">
+                <td th:text="${entity.id}"></td>
+                <td th:text="${entity.name}"></td>
+            </tr>
+        </tbody>
     </table>
 </div>
 
