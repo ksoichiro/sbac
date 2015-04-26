@@ -3,8 +3,7 @@
     border-color: #1E88E5; // Blue 600
 
     .navbar-brand,
-    .navbar-nav>li>a,
-    .navbar-nav>.open .dropdown-menu>li>a {
+    .navbar-nav>li>a {
         color: #E3F2FD; // Blue 50
     }
     .navbar-nav>.open>a,
@@ -30,6 +29,13 @@
 @media (min-width: 767px) {
     .navbar-right {
         margin-right: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .navbar-inverse {
+        .navbar-nav>.open .dropdown-menu>li>a {
+            color: #E3F2FD; // Blue 50
+        }
     }
 }
 
