@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/css/var/rmargin.js","names":[],"mappings":"","sources":["jquery/src/css/var/rmargin.js"],"sourcesContent":["define(function() {\n\treturn (/^margin/);\n});\n"],"sourceRoot":"/source/"}

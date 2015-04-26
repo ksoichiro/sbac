@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/core/var/rsingleTag.js","names":[],"mappings":"","sources":["jquery/src/core/var/rsingleTag.js"],"sourcesContent":["define(function() {\n\t// Match a standalone tag\n\treturn (/^<(\\w+)\\s*\\/?>(?:<\\/\\1>|)$/);\n});\n"],"sourceRoot":"/source/"}

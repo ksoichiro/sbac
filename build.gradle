@@ -87,6 +87,19 @@ task npmInstall(type: Exec) {
     }
 }
 
+task npmClean(type: Exec) {
+    logging.captureStandardOutput LogLevel.INFO
+    logging.captureStandardError LogLevel.INFO
+    inputs.dir "src"
+    inputs.file "gulpfile.coffee"
+    outputs.dir "dist"
+    if(Os.isFamily(Os.FAMILY_WINDOWS)) {
+        commandLine 'cmd', '/c', 'npm', 'run', 'clean'
+    } else {
+        commandLine 'npm', 'run', 'clean'
+    }
+}
+
 task npmBuild(dependsOn: npmInstall, type: Exec) {
     logging.captureStandardOutput LogLevel.INFO
     logging.captureStandardError LogLevel.INFO
@@ -101,4 +114,5 @@ task npmBuild(dependsOn: npmInstall, type: Exec) {
 }
 
 task stage(dependsOn: ['clean', 'build'])
-defaultTasks 'clean', 'build'
+npmBuild.mustRunAfter npmClean
+defaultTasks 'clean', 'npmClean', 'npmBuild', 'build'

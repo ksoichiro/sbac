@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/var/pnum.js","names":[],"mappings":"","sources":["jquery/src/var/pnum.js"],"sourcesContent":["define(function() {\n\treturn (/[+-]?(?:\\d*\\.|)\\d+(?:[eE][+-]?\\d+|)/).source;\n});\n"],"sourceRoot":"/source/"}

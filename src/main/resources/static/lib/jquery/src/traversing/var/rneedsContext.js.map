@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/traversing/var/rneedsContext.js","names":[],"mappings":"","sources":["jquery/src/traversing/var/rneedsContext.js"],"sourcesContent":["define([\n\t\"../../core\",\n\t\"../../selector\"\n], function( jQuery ) {\n\treturn jQuery.expr.match.needsContext;\n});\n"],"sourceRoot":"/source/"}

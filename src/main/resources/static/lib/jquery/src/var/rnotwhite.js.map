@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/var/rnotwhite.js","names":[],"mappings":"","sources":["jquery/src/var/rnotwhite.js"],"sourcesContent":["define(function() {\n\treturn (/\\S+/g);\n});\n"],"sourceRoot":"/source/"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/var/support.js","names":[],"mappings":"","sources":["jquery/src/var/support.js"],"sourcesContent":["define(function() {\n\t// All support tests are defined in their respective modules.\n\treturn {};\n});\n"],"sourceRoot":"/source/"}

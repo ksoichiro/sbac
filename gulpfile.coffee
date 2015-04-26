@@ -7,6 +7,7 @@ coffee = require 'gulp-coffee'
 less = require 'gulp-less'
 cssmin = require 'gulp-minify-css'
 gulp = require 'gulp'
+del = require 'del'
 
 paths =
     less:
@@ -50,5 +51,8 @@ gulp.task 'bower-files', ->
 gulp.task 'watch', ->
     gulp.watch paths.less.files, ['less']
     gulp.watch paths.coffee.files, ['coffee']
+
+gulp.task 'clean', (cb) ->
+    del [paths.dest + 'lib', paths.dest + 'js', paths.dest + 'css'], cb
 
 gulp.task 'build', ['less', 'coffee', 'bower-files'], ->

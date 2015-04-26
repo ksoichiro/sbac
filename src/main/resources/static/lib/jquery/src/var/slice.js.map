@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/var/slice.js","names":[],"mappings":"","sources":["jquery/src/var/slice.js"],"sourcesContent":["define([\n\t\"./deletedIds\"\n], function( deletedIds ) {\n\treturn deletedIds.slice;\n});\n"],"sourceRoot":"/source/"}

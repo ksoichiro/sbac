@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/var/toString.js","names":[],"mappings":"","sources":["jquery/src/var/toString.js"],"sourcesContent":["define([\n\t\"./class2type\"\n], function( class2type ) {\n\treturn class2type.toString;\n});\n"],"sourceRoot":"/source/"}

@@ -1,1 +1,0 @@
-{"version":3,"file":"jquery/src/manipulation/var/rcheckableType.js","names":[],"mappings":"","sources":["jquery/src/manipulation/var/rcheckableType.js"],"sourcesContent":["define(function() {\n\treturn (/^(?:checkbox|radio)$/i);\n});\n"],"sourceRoot":"/source/"}
