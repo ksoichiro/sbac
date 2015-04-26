@@ -1,5 +1,6 @@
 package admin.console.web;
 
+import admin.console.exception.UniqueConstraintException;
 import admin.console.form.ServiceForm;
 import admin.console.service.ServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,12 @@ public class ServicesController {
         if (bindingResult.hasErrors()) {
             return newService(form);
         }
-        serviceService.save(form);
+        try {
+            serviceService.save(form);
+        } catch (UniqueConstraintException e) {
+            bindingResult.reject("error.services.name.duplicate");
+            return newService(form);
+        }
         return "redirect:/services";
     }
 }

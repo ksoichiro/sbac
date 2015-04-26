@@ -12,12 +12,15 @@
 
     <div class="form-group">
         <form th:action="@{/services/create}" th:object="${serviceForm}" method="post">
+            <div class="alert alert-warning" th:if="${#fields.hasErrors()}" th:errors="*">Error</div>
+
             <div class="form-group">
                 <label for="name" th:text="#{model.service.name}"></label>
                 <input type="text" th:field="*{name}" th:value="*{name}" class="form-control" required="true" autofocus="true" />
             </div>
             <div class="alert alert-warning" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error</div>
-            <input type="submit" class="btn btn-danger" th:value="#{msg.services.new.submit}" />
+            <input type="submit" class="btn btn-primary" th:value="#{msg.services.new.submit}" />
+            <a th:href="@{/services}" class="btn btn-default" th:text="#{msg.general.cancel}"></a>
         </form>
     </div>
 
