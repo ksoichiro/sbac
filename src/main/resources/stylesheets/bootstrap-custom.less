@@ -3,13 +3,33 @@
     border-color: #1E88E5; // Blue 600
 
     .navbar-brand,
-    .navbar-nav>li>a {
+    .navbar-nav>li>a,
+    .navbar-nav>.open .dropdown-menu>li>a {
         color: #E3F2FD; // Blue 50
     }
     .navbar-nav>.open>a,
     .navbar-nav>.open>a:focus,
     .navbar-nav>.open>a:hover {
         background-color: #1976D2; // Blue 800
+    }
+    .navbar-toggle {
+        background-color: #2196F3; // Blue 500
+    }
+    .navbar-toggle {
+        border-color: #1976D2; // Blue 800
+        &:hover,
+        &:focus {
+            background-color: #1E88E5; // Blue 600
+        }
+    }
+    .navbar-collapse {
+        border-color: #1E88E5; // Blue 600
+    }
+}
+
+@media (min-width: 767px) {
+    .navbar-right {
+        margin-right: 10px;
     }
 }
 
@@ -23,6 +43,7 @@
 @nav-bg-sub-menu-color: #181c20;
 @nav-bg-sub-menu-hover-color: #020203;
 @nav-li-border-color: #23282e;
+@nav-width: 300px;
 
 .nav-side-menu {
     overflow: auto;
@@ -32,7 +53,7 @@
     background-color: @nav-bg-color;
     position: fixed;
     top: 50px;
-    width: 300px;
+    width: @nav-width;
     height: 100%;
     color: @nav-color;
 
@@ -128,6 +149,12 @@
     }
 }
 
+.main-content {
+    @main-content-margin: 30px;
+    margin: @main-content-margin;
+    margin-left: @nav-width + @main-content-margin;
+}
+
 @media (max-width: 767px) {
     .nav-side-menu {
         position: relative;
@@ -147,6 +174,11 @@
             width: 40px;
             text-align: center;
         }
+    }
+
+    .main-content {
+        @main-content-margin: 30px;
+        margin: @main-content-margin;
     }
 }
 

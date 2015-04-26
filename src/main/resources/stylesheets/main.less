@@ -4,12 +4,11 @@ body {
 #body-login {
     @bg-from: #1976D2;
     @bg-to: #64B5F6;
+    @base_color: #fff;
+    @base_width: 400px;
 
     background: -moz-linear-gradient(left, @bg-from, @bg-to);
     background: -webkit-gradient(linear, left top, right top, from(@bg-from), to(@bg-to));
-
-    @base_color: #fff;
-    @base_width: 400px;
 
     p, a {
         color: @base_color;
@@ -53,7 +52,19 @@ body {
             }
         }
     }
-}
-.navbar-right {
-    margin-right: 10px;
+
+    .footer {
+        @footer-margin: 30px;
+
+        position: fixed;
+        left: 0px;
+        bottom: @footer-margin;
+        width: 100%;
+        padding: 0 @footer-margin;
+        padding-top: @footer-margin;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        * {
+            color: #fff;
+        }
+    }
 }
