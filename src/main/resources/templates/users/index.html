@@ -10,8 +10,18 @@
 <div layout:fragment="content">
     <h1>Users</h1>
 
-    <table>
-
+    <div class="pull-right">
+        <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> New User</a>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+        </thead>
+        <tr th:each="entity : ${userList}">
+            <td th:text="${entity.id}"></td>
+            <td th:text="${entity.username}"></td>
+        </tr>
     </table>
 </div>
 
