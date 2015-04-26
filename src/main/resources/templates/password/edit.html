@@ -8,11 +8,10 @@
 <body>
 
 <div class="container" layout:fragment="content">
-
     <h1 th:text="#{msg.password.edit.title}"></h1>
 
     <div class="form-group">
-        <form id="newTodo" th:action="@{/password/update}" th:object="${passwordUpdateForm}" method="post">
+        <form th:action="@{/password/update}" th:object="${passwordUpdateForm}" method="post">
             <div class="form-group">
                 <label for="currentPassword" th:text="#{msg.password.edit.current_password}"></label>
                 <input type="password" th:field="*{currentPassword}" class="form-control" required="true" autofocus="true" />
