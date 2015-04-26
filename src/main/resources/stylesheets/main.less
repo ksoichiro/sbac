@@ -1,3 +1,5 @@
+@import "../../../../bower_modules/bootstrap/less/bootstrap.less";
+
 body {
 }
 
@@ -47,7 +49,7 @@ body {
             .forgot-password {
                 margin-top: 20px;
             }
-            #username, #password {
+            #password {
                 margin-bottom: 10px;
             }
         }
@@ -67,4 +69,11 @@ body {
             color: #fff;
         }
     }
+}
+
+.form-control.top {
+    .border-bottom-radius(0);
+}
+.form-control.bottom {
+    .border-top-radius(0);
 }
