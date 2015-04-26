@@ -22,15 +22,15 @@
         <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
         <div class="menu-list">
             <ul id="menu-content" class="menu-content collapse out">
-                <li>
+                <li th:class="${active} == 'home' ? 'active' : ''">
                     <a th:href="@{/}"><i class="fa fa-home fa-lg"></i><span th:text="#{msg.sidebar.home}"></span></a>
                 </li>
 
-                <li>
+                <li th:class="${active} == 'services' ? 'active' : ''">
                     <a th:href="@{/services}"><i class="fa fa-power-off fa-lg"></i><span th:text="#{msg.sidebar.services}"></span></a>
                 </li>
 
-                <li data-toggle="collapse" data-target="#menu-item-statistics" class="collapsed active">
+                <li data-toggle="collapse" data-target="#menu-item-statistics" class="collapsed" th:classappend="${active} == 'statistics' ? 'active' : ''">
                     <a href="#"><i class="fa fa-bar-chart fa-lg"></i><span th:text="#{msg.sidebar.statistics}"></span><span class="arrow"></span></a>
                 </li>
                 <ul class="sub-menu collapse" id="menu-item-statistics">
@@ -38,19 +38,19 @@
                     <li><a href="#" th:text="#{msg.sidebar.statistics.logs}"></a></li>
                 </ul>
 
-                <li>
+                <li th:class="${active} == 'api' ? 'active' : ''">
                     <a href="#"><i class="fa fa-exchange fa-lg"></i><span th:text="#{msg.sidebar.api}"></span></a>
                 </li>
 
-                <li>
+                <li th:class="${active} == 'roles' ? 'active' : ''">
                     <a th:href="@{/roles}"><i class="fa fa-cogs fa-lg"></i><span th:text="#{msg.sidebar.roles}"></span></a>
                 </li>
 
-                <li>
+                <li th:class="${active} == 'users' ? 'active' : ''">
                     <a th:href="@{/users}"><i class="fa fa-users fa-lg"></i><span th:text="#{msg.sidebar.users}"></span></a>
                 </li>
 
-                <li>
+                <li th:class="${active} == 'account' ? 'active' : ''">
                     <a href="#"><i class="fa fa-user fa-lg"></i><span th:text="#{msg.sidebar.account}"></span></a>
                 </li>
             </ul>

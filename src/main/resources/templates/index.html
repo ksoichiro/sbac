@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="layouts/default">
+      layout:decorator="layouts/default"
+      th:with="active='home'">
 <head>
     <title th:text="#{msg.home.title}"></title>
 </head>
