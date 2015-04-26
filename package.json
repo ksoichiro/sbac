@@ -25,7 +25,6 @@
     "gulp-uglify": "0.2.1",
     "gulp-util": "3.0.1"
   },
-  "cacheDirectories": ["node_modules", "bower_modules"],
   "scripts": {
     "prepublish": "bower install --config.interactive=false",
     "build": "gulp build",
