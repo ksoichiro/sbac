@@ -76,8 +76,8 @@
         background-color: @nav-bg-sub-menu-hover-color;
     }
 
-    ul .sub-menu li:before,
-    li .sub-menu li:before {
+    ul .sub-menu li a:before,
+    li .sub-menu li a:before {
         font-family: FontAwesome;
         content: "\f105";
         display: inline-block;
@@ -111,6 +111,11 @@
         -o-transition: all 1s ease;
         -ms-transition: all 1s ease;
         transition: all 1s ease;
+    }
+
+    li a {
+        display: block;
+        width: 100%;
     }
 }
 
