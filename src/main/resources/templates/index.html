@@ -3,25 +3,25 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layouts/default">
 <head>
-    <title>Home</title>
+    <title th:text="#{msg.home.title}"></title>
 </head>
 <body>
 
 <div layout:fragment="content">
-    <h1>Spring Boot Admin Console</h1>
+    <h1 th:text="#{msg.title}"></h1>
 
-    <h2>What's this?</h2>
-    <p>This is a showcase app made with Spring Boot to demonstrate some kind of application for administrators.</p>
+    <h2 th:text="#{msg.home.about.title}"></h2>
+    <p th:text="#{msg.home.about.description}"></p>
 
-    <h2>Elements included</h2>
+    <h2 th:text="#{msg.home.elements.title}"></h2>
     <ul>
-        <li>Login form</li>
-        <li>Side menu</li>
-        <li>User information and menu on the top</li>
-        <li>Basic CRUD screens for some master data</li>
+        <li th:text="#{msg.home.elements.li.login}"></li>
+        <li th:text="#{msg.home.elements.li.sidemenu}"></li>
+        <li th:text="#{msg.home.elements.li.user}"></li>
+        <li th:text="#{msg.home.elements.li.crud}"></li>
     </ul>
 
-    <h2>Used frameworks and libraries</h2>
+    <h2 th:text="#{msg.home.frameworks}"></h2>
     <ul>
         <li>Spring Boot</li>
         <li>Bootstrap</li>

@@ -3,32 +3,32 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layouts/default">
 <head>
-    <title>Change password</title>
+    <title th:value="#{msg.password.edit.title}"></title>
 </head>
 <body>
 
 <div class="container" layout:fragment="content">
 
-    <h1>Change password</h1>
+    <h1 th:text="#{msg.password.edit.title}"></h1>
 
     <div class="form-group">
         <form id="newTodo" th:action="@{/password/update}" th:object="${passwordUpdateForm}" method="post">
             <div class="form-group">
-                <label for="currentPassword">Current password</label>
+                <label for="currentPassword" th:text="#{msg.password.edit.current_password}"></label>
                 <input type="password" th:field="*{currentPassword}" class="form-control" required="true" autofocus="true" />
             </div>
             <div class="alert alert-warning" th:if="${#fields.hasErrors('currentPassword')}" th:errors="*{currentPassword}">Error</div>
             <div class="form-group">
-                <label for="newPassword">New password</label>
+                <label for="newPassword" th:text="#{msg.password.edit.new_password}"></label>
                 <input type="password" th:field="*{newPassword}" class="form-control" required="true" />
             </div>
             <div class="alert alert-warning" th:if="${#fields.hasErrors('newPassword')}" th:errors="*{newPassword}">Error</div>
             <div class="form-group">
-                <label for="newPasswordConfirm">New password (retype)</label>
+                <label for="newPasswordConfirm" th:text="#{msg.password.edit.new_password_retype}"></label>
                 <input type="password" th:field="*{newPasswordConfirm}" class="form-control" required="true" />
             </div>
             <div class="alert alert-warning" th:if="${#fields.hasErrors('newPasswordConfirm')}" th:errors="*{newPasswordConfirm}">Error</div>
-            <input type="submit" class="btn btn-danger" value="Change password" />
+            <input type="submit" class="btn btn-danger" th:value="#{msg.password.edit.submit}" />
         </form>
     </div>
 

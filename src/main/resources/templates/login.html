@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
-    <title>Login - admin-console</title>
+    <title th:text="#{msg.login.title}"></title>
     <link rel="stylesheet" type="text/css" th:href="@{/lib/components-font-awesome/css/font-awesome.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/main.css}" />
@@ -15,24 +15,24 @@
 
 <div id="panel-login">
     <div class="panel-heading">
-        <h3><a th:href="@{/}">Spring Boot Admin Console</a></h3>
+        <h3><a th:href="@{/}" th:text="#{msg.title}"></a></h3>
     </div>
     <div class="panel-main">
         <div class="panel-body">
             <div class="login-header">
-                <div class="alert alert-warning" th:if="${param.error}">Invalid username and password.</div>
-                <div class="alert alert-info" th:if="${param.logout}">You have been logged out.</div>
+                <div class="alert alert-warning" th:if="${param.error}" th:text="#{msg.login.error}"></div>
+                <div class="alert alert-info" th:if="${param.logout}" th:text="#{msg.login.logout}"></div>
             </div>
             <form class="form-signin" th:action="@{/login}" method="post">
                 <div class="form-group">
-                    <input type="text" id="username" name="username" class="form-control input-lg top" placeholder="Username" required="true" autofocus="true" />
-                    <input type="password" id="password" name="password" class="form-control input-lg bottom" placeholder="Password" required="true" />
+                    <input type="text" id="username" name="username" class="form-control input-lg top" th:placeholder="#{msg.login.username}" required="true" autofocus="true" />
+                    <input type="password" id="password" name="password" class="form-control input-lg bottom" th:placeholder="#{msg.login.password}" required="true" />
                 </div>
-                <button class="btn btn-primary btn-block btn-lg" type="submit">Login</button>
+                <button class="btn btn-primary btn-block btn-lg" type="submit" th:text="#{msg.login.submit}"></button>
             </form>
             <div class="login-footer">
                 <div class="forgot-password">
-                    <a href="#">Forgot password?</a>
+                    <a href="#" th:text="#{msg.login.forgot_password}"></a>
                 </div>
             </div>
         </div>
@@ -42,9 +42,9 @@
 <div class="container footer">
     <div class="row">
         <div class="col-md-8">
-            <a href="#">Terms of Service</a>
+            <a href="#" th:text="#{msg.login.terms}"></a>
             |
-            <a href="#">Privacy policy</a>
+            <a href="#" th:text="#{msg.login.privacy}"></a>
         </div>
         <div class="col-md-4">
             <p class="muted pull-right" th:text="'© ' + #{msg.copyright.year} + ' ' + #{msg.copyright.holder} + '. All rights reserved.'">copyright</p>

@@ -3,20 +3,20 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorator="layouts/default">
 <head>
-    <title>Users</title>
+    <title th:text="#{msg.users.title}"></title>
 </head>
 <body>
 
 <div layout:fragment="content">
-    <h1>Users</h1>
+    <h1 th:text="#{msg.users.title}"></h1>
 
     <div class="pull-right">
-        <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> New User</a>
+        <a href="#" class="btn btn-primary"><i class="fa fa-plus"></i> <span th:text="#{msg.users.new_user}"></span></a>
     </div>
     <table class="table table-striped">
         <thead>
-            <th>ID</th>
-            <th>Name</th>
+            <th th:text="#{model.user.id}"></th>
+            <th th:text="#{model.user.username}"></th>
         </thead>
         <tr th:each="entity : ${userList}">
             <td th:text="${entity.id}"></td>
