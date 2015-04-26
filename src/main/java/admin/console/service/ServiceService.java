@@ -1,5 +1,6 @@
 package admin.console.service;
 
+import admin.console.form.ServiceForm;
 import admin.console.repository.ServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,11 @@ public class ServiceService {
             list.add(service);
         }
         return list;
+    }
+
+    public admin.console.domain.Service save(ServiceForm serviceForm) {
+        admin.console.domain.Service service = new admin.console.domain.Service();
+        service.setName(serviceForm.getName());
+        return serviceRepository.save(service);
     }
 }

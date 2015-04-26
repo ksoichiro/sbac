@@ -10,6 +10,9 @@
 <div layout:fragment="content">
     <h1 th:text="#{msg.services.title}"></h1>
 
+    <div class="pull-right">
+        <a th:href="@{/services/new}" class="btn btn-primary"><i class="fa fa-plus"></i> <span th:text="#{msg.services.new_service}"></span></a>
+    </div>
     <table class="table table-striped">
         <thead>
             <tr>

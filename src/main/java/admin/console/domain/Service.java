@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 public class Service {
     @Id
+    @GeneratedValue
     private Long id;
     private String name;
 
