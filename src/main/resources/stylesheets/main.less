@@ -55,18 +55,27 @@ body {
         }
     }
 
+    @footer-margin: 30px;
     .footer {
-        @footer-margin: 30px;
-
-        position: fixed;
-        left: 0px;
-        bottom: @footer-margin;
         width: 100%;
+        .row {
+            max-width: 960px;
+            margin: auto;
+        }
         padding: 0 @footer-margin;
         padding-top: @footer-margin;
+        padding-bottom: @footer-margin;
         border-top: 1px solid rgba(255, 255, 255, 0.5);
         * {
             color: #fff;
+        }
+    }
+
+    @media (min-height: 710px) {
+        .footer {
+            position: fixed;
+            left: 0px;
+            bottom: 0px;
         }
     }
 }
