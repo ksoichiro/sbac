@@ -27,7 +27,7 @@
   },
   "cacheDirectories": ["node_modules", "bower_modules"],
   "scripts": {
-    "postinstall": "bower install --config.interactive=false && gulp clean && gulp build",
+    "prepublish": "bower install --config.interactive=false",
     "build": "gulp build",
     "clean": "gulp clean",
     "watch": "gulp watch"
