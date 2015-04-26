@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+<head>
+    <title th:text="#{msg.services.title}"></title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <h1 th:text="#{msg.services.title}"></h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th th:text="#{model.service.id}"></th>
+                <th th:text="#{model.service.name}"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="entity : ${serviceList}">
+                <td th:text="${entity.id}"></td>
+                <td th:text="${entity.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

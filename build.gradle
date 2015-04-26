@@ -75,6 +75,8 @@ task encodePassword << {
     println encoder.encode(username)
 }
 
+apply from: 'name-generator.gradle'
+
 task npmInstall(type: Exec) {
     logging.captureStandardOutput LogLevel.INFO
     logging.captureStandardError LogLevel.LIFECYCLE
