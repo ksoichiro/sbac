@@ -26,39 +26,21 @@
                     <a th:href="@{/}"><i class="fa fa-home fa-lg"></i><span th:text="#{msg.sidebar.home}"></span></a>
                 </li>
 
-                <li data-toggle="collapse" data-target="#products" class="collapsed active">
-                    <a href="#"><i class="fa fa-gift fa-lg"></i>UI Elements<span class="arrow"></span></a>
+                <li>
+                    <a href="#"><i class="fa fa-power-off fa-lg"></i><span th:text="#{msg.sidebar.services}"></span></a>
                 </li>
-                <ul class="sub-menu collapse" id="products">
-                    <li class="active"><a href="#">CSS3 Animation</a></li>
-                    <li><a href="#">General</a></li>
-                    <li><a href="#">Buttons</a></li>
-                    <li><a href="#">Tabs &amp; Accordions</a></li>
-                    <li><a href="#">Typography</a></li>
-                    <li><a href="#">FontAwesome</a></li>
-                    <li><a href="#">Slider</a></li>
-                    <li><a href="#">Panels</a></li>
-                    <li><a href="#">Widgets</a></li>
-                    <li><a href="#">Bootstrap Model</a></li>
+
+                <li data-toggle="collapse" data-target="#menu-item-statistics" class="collapsed active">
+                    <a href="#"><i class="fa fa-bar-chart fa-lg"></i><span th:text="#{msg.sidebar.statistics}"></span><span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="menu-item-statistics">
+                    <li class="active"><a href="#" th:text="#{msg.sidebar.statistics.dashboard}"></a></li>
+                    <li><a href="#" th:text="#{msg.sidebar.statistics.logs}"></a></li>
                 </ul>
 
-                <li data-toggle="collapse" data-target="#service" class="collapsed">
-                    <a href="#"><i class="fa fa-globe fa-lg"></i>Services<span class="arrow"></span></a>
+                <li>
+                    <a href="#"><i class="fa fa-exchange fa-lg"></i><span th:text="#{msg.sidebar.api}"></span></a>
                 </li>
-                <ul class="sub-menu collapse" id="service">
-                    <li><a href="#">New Service 1</a></li>
-                    <li><a href="#">New Service 2</a></li>
-                    <li><a href="#">New Service 3</a></li>
-                </ul>
-
-                <li data-toggle="collapse" data-target="#new" class="collapsed">
-                    <a href="#"><i class="fa fa-car fa-lg"></i>New<span class="arrow"></span></a>
-                </li>
-                <ul class="sub-menu collapse" id="new">
-                    <li><a href="#">New New 1</a></li>
-                    <li><a href="#">New New 2</a></li>
-                    <li><a href="#">New New 3</a></li>
-                </ul>
 
                 <li>
                     <a th:href="@{/roles}"><i class="fa fa-cogs fa-lg"></i><span th:text="#{msg.sidebar.roles}"></span></a>
@@ -66,6 +48,10 @@
 
                 <li>
                     <a th:href="@{/users}"><i class="fa fa-users fa-lg"></i><span th:text="#{msg.sidebar.users}"></span></a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-user fa-lg"></i><span th:text="#{msg.sidebar.account}"></span></a>
                 </li>
             </ul>
         </div>
