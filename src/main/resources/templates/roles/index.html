@@ -10,8 +10,15 @@
 <div layout:fragment="content">
     <h1 th:text="#{msg.roles.title}"></h1>
 
-    <table>
-
+    <table class="table table-striped">
+        <thead>
+        <th th:text="#{model.role.id}"></th>
+        <th th:text="#{model.role.name}"></th>
+        </thead>
+        <tr th:each="entity : ${roleList}">
+            <td th:text="${entity.id}"></td>
+            <td th:text="${entity.name}"></td>
+        </tr>
     </table>
 </div>
 
