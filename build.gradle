@@ -37,7 +37,7 @@ dependencies {
 }
 
 jar {
-    baseName = 'admin-console'
+    baseName = 'sbac'
     version = '0.0.1-SNAPSHOT'
 }
 
@@ -47,8 +47,8 @@ idea {
         outputDir = file("${buildDir}/classes/main")
 
         excludeDirs += [
-                file('bower_modules'),
                 file('src/main/resources/static'),
+                file('bower_components'),
                 file('node_modules')
         ]
     }

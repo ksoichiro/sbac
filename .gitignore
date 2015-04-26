@@ -2,7 +2,7 @@
 .idea/
 build/
 *.iml
-bower_modules/
 src/main/resources/static/
+bower_components/
 node_modules/
 npm-debug.log
