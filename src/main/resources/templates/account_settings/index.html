@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default"
+      th:with="active='account_settings'">
+<head>
+    <title th:text="#{msg.account_settings.title}"></title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <h1 th:text="#{msg.account_settings.title}"></h1>
+
+    <h3 th:text="#{msg.account_settings.email.title}"></h3>
+
+    <form>
+        <div class="form-group">
+            <input type="text" value="xxxx@xxxx.com" class="form-control" />
+        </div>
+        <input type="submit" th:value="#{msg.account_settings.email.submit}" class="btn btn-primary" />
+    </form>
+
+    <h3 th:text="#{msg.account_settings.token.title}"></h3>
+
+    <p th:text="#{msg.account_settings.token.warning}"></p>
+
+    <div class="well">
+        d2uvdho4tDCASjoi4tHtRvnoRevJfMtBo9R
+    </div>
+
+    <a href="#" class="btn btn-danger" th:text="#{msg.account_settings.token.submit}"></a>
+</div>
+
+</body>
+</html>

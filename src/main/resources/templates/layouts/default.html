@@ -50,8 +50,8 @@
                     <a th:href="@{/users}"><i class="fa fa-users fa-lg"></i><span th:text="#{msg.sidebar.users}"></span></a>
                 </li>
 
-                <li th:class="${active} == 'account' ? 'active' : ''">
-                    <a href="#"><i class="fa fa-user fa-lg"></i><span th:text="#{msg.sidebar.account}"></span></a>
+                <li th:class="${active} == 'account_settings' ? 'active' : ''">
+                    <a th:href="@{/account_settings}"><i class="fa fa-user fa-lg"></i><span th:text="#{msg.sidebar.account_settings}"></span></a>
                 </li>
             </ul>
         </div>
