@@ -7,7 +7,7 @@
 
 <nav th:fragment="pagination (page, url)" th:object="${page}" th:if="${serviceList.totalElements > 0}">
     <ul class="pagination">
-        <li>
+        <li th:class="*{first} ? 'disabled' : ''">
             <a th:href="@{${url}(page=0, size=*{size})}" aria-label="Previous">
                 <span aria-hidden="true">&laquo;</span>
             </a>
@@ -21,7 +21,7 @@
         <li th:if="*{number + 2} lt *{totalPages}"><a th:href="@{/services(page=*{number + 2}, size=*{size})}" th:text="*{number + 3}">5</a></li>
         <li th:if="*{number} le 1 and *{number + 3} lt *{totalPages}"><a th:href="@{/services(page=*{number + 3}, size=*{size})}" th:text="*{number + 4}"></a></li>
         <li th:if="*{number} le 0 and *{number + 4} lt *{totalPages}"><a th:href="@{/services(page=*{number + 4}, size=*{size})}" th:text="*{number + 5}"></a></li>
-        <li>
+        <li th:class="*{last} ? 'disabled' : ''">
             <a th:href="@{/services(page=*{totalPages - 1}, size=*{size})}" aria-label="Next">
                 <span aria-hidden="true">&raquo;</span>
             </a>
