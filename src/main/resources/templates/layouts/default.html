@@ -38,8 +38,8 @@
                     <li><a href="#" th:text="#{msg.sidebar.statistics.logs}"></a></li>
                 </ul>
 
-                <li th:class="${active} == 'api' ? 'active' : ''">
-                    <a href="#"><i class="fa fa-exchange fa-lg"></i><span th:text="#{msg.sidebar.api}"></span></a>
+                <li th:class="${active} == 'api_settings' ? 'active' : ''">
+                    <a th:href="@{/api_settings}"><i class="fa fa-exchange fa-lg"></i><span th:text="#{msg.sidebar.api_settings}"></span></a>
                 </li>
 
                 <li th:class="${active} == 'roles' ? 'active' : ''">

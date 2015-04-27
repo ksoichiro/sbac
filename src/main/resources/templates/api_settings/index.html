@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default"
+      th:with="active='api_settings'">
+<head>
+    <title th:text="#{msg.api_settings.title}"></title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <h1 th:text="#{msg.api_settings.title}"></h1>
+</div>
+
+</body>
+</html>
