@@ -25,6 +25,8 @@
             </tr>
         </tbody>
     </table>
+
+    <nav th:replace="fragments/pagination ::pagination (page=${roleList}, url='/roles')"></nav>
 </div>
 
 </body>

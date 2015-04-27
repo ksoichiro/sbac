@@ -28,6 +28,8 @@
             </tr>
         </tbody>
     </table>
+
+    <nav th:replace="fragments/pagination ::pagination (page=${userList}, url='/users')"></nav>
 </div>
 
 </body>
