@@ -4,6 +4,8 @@ import admin.console.exception.UniqueConstraintException;
 import admin.console.form.ServiceForm;
 import admin.console.service.ServiceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,8 +19,8 @@ public class ServicesController {
     private ServiceService serviceService;
 
     @RequestMapping
-    public String index(Model model) {
-        model.addAttribute("serviceList", serviceService.findAll());
+    public String index(Model model, @PageableDefault(10) Pageable pageable) {
+        model.addAttribute("serviceList", serviceService.findAll(pageable));
         return "services/index";
     }
 

@@ -4,11 +4,11 @@ import admin.console.exception.UniqueConstraintException;
 import admin.console.form.ServiceForm;
 import admin.console.repository.ServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 @Transactional
@@ -16,12 +16,8 @@ public class ServiceService {
     @Autowired
     private ServiceRepository serviceRepository;
 
-    public List<admin.console.domain.Service> findAll() {
-        List<admin.console.domain.Service> list = new ArrayList<admin.console.domain.Service>();
-        for (admin.console.domain.Service service : serviceRepository.findAll()) {
-            list.add(service);
-        }
-        return list;
+    public Page<admin.console.domain.Service> findAll(Pageable pageable) {
+        return serviceRepository.findAll(pageable);
     }
 
     public admin.console.domain.Service save(ServiceForm serviceForm) throws UniqueConstraintException {
