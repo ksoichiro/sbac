@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default"
+      th:with="active='statistics', active2='dashboard'">
+<head>
+    <title th:text="#{msg.statistics.dashboard.title}"></title>
+</head>
+<body>
+
+<div layout:fragment="content">
+    <h1 th:text="#{msg.statistics.dashboard.title}"></h1>
+</div>
+
+</body>
+</html>

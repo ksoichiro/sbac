@@ -30,12 +30,12 @@
                     <a th:href="@{/services}"><i class="fa fa-power-off fa-lg"></i><span th:text="#{msg.sidebar.services}"></span></a>
                 </li>
 
-                <li data-toggle="collapse" data-target="#menu-item-statistics" class="collapsed" th:classappend="${active} == 'statistics' ? 'active' : ''">
-                    <a href="#"><i class="fa fa-bar-chart fa-lg"></i><span th:text="#{msg.sidebar.statistics}"></span><span class="arrow"></span></a>
+                <li data-toggle="collapse" data-target="#menu-item-statistics" th:class="${active} == 'statistics' ? 'active collapsed' : ''">
+                    <a href="javascript:void(0);"><i class="fa fa-bar-chart fa-lg"></i><span th:text="#{msg.sidebar.statistics}"></span><span class="arrow"></span></a>
                 </li>
-                <ul class="sub-menu collapse" id="menu-item-statistics">
-                    <li class="active"><a href="#" th:text="#{msg.sidebar.statistics.dashboard}"></a></li>
-                    <li><a href="#" th:text="#{msg.sidebar.statistics.logs}"></a></li>
+                <ul class="sub-menu collapse" th:classappend="${active} == 'statistics' ? 'in' : ''" id="menu-item-statistics">
+                    <li th:class="${active2} == 'dashboard' ? 'active' : ''"><a th:href="@{/statistics/dashboard}" th:text="#{msg.sidebar.statistics.dashboard}"></a></li>
+                    <li th:class="${active2} == 'logs' ? 'active' : ''"><a th:href="@{/statistics/logs}" th:text="#{msg.sidebar.statistics.logs}"></a></li>
                 </ul>
 
                 <li th:class="${active} == 'api_settings' ? 'active' : ''">
