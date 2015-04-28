@@ -4,6 +4,7 @@ create table if not exists `user` (
     `password` varchar(255) not null,
     `enabled` boolean not null default true,
     `role_id` bigint(20) not null,
+    `theme_id` bigint(20),
     `updated_at` bigint(20) not null,
     `created_at` bigint(20) not null,
     primary key (`id`),
@@ -18,6 +19,13 @@ create table if not exists `role` (
 ) default charset=utf8;
 
 create table if not exists `service` (
+    `id` bigint(20) not null auto_increment,
+    `name` varchar(255) not null,
+    primary key (`id`),
+    unique (`name`)
+) default charset=utf8;
+
+create table if not exists `theme` (
     `id` bigint(20) not null auto_increment,
     `name` varchar(255) not null,
     primary key (`id`),

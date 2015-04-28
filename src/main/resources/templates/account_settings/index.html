@@ -29,6 +29,18 @@
     </div>
 
     <a href="#" class="btn btn-danger" th:text="#{msg.account_settings.token.submit}"></a>
+
+    <h3 th:text="#{msg.account_settings.design.title}"></h3>
+
+    <form th:action="@{/account_settings/update_theme}" th:object="${accountSettingsUpdateThemeForm}" method="post">
+        <div class="radio" th:each="theme : ${themeList}">
+            <label>
+                <input type="radio" th:value="${theme.name}" th:field="*{themeName}" />
+                <span th:text="#{enum.theme.__${theme.name}__}"></span>
+            </label>
+        </div>
+        <input type="submit" th:value="#{msg.general.save}" class="btn btn-primary" />
+    </form>
 </div>
 
 </body>

@@ -24,6 +24,8 @@ public class User extends org.springframework.security.core.userdetails.User {
 
     private boolean enabled;
 
+    private Long themeId;
+
     @Column(nullable = false)
     private Long createdAt;
 

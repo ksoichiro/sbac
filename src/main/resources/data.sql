@@ -120,3 +120,6 @@ insert into `service` (`name`) values ('calculating-sun');
 insert into `service` (`name`) values ('elderly-credit');
 insert into `service` (`name`) values ('shivering-detail');
 insert into `service` (`name`) values ('abaft-hall');
+
+insert into `theme` (`id`, `name`) values (1, 'normal');
+insert into `theme` (`id`, `name`) values (2, 'dark');

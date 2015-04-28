@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/application.css}" />
     <script th:src="@{/lib/respond-minmax/dest/respond.min.js}"></script>
 </head>
-<body>
+<body th:class="${session.theme} ?: 'theme-normal'">
 
 <nav th:replace="fragments/nav :: navbar">
 </nav>
