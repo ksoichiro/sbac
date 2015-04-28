@@ -9,6 +9,7 @@ import org.springframework.web.servlet.resource.VersionResourceResolver;
 
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
+    // Required to enable resource handlers
     @Bean
     public ResourceUrlEncodingFilter resourceUrlEncodingFilter() {
         return new ResourceUrlEncodingFilter();
@@ -16,6 +17,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        // Files in the CSS and JS directories will be versioned
         VersionResourceResolver versionResolver = new VersionResourceResolver()
                 .addContentVersionStrategy("/css/**", "/js/**");
         registry.addResourceHandler("/**")
