@@ -4,6 +4,9 @@
 <head lang="en">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if lt IE 9]>
+    <script th:src="@{/lib/html5shiv/dist/html5shiv-printshiv.min.js}"></script>
+    <![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
@@ -11,6 +14,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/lib/components-font-awesome/css/font-awesome.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}" />
     <link rel="stylesheet" type="text/css" th:href="@{/css/application.css}" />
+    <script th:src="@{/lib/respond-minmax/dest/respond.min.js}"></script>
 </head>
 <body>
 

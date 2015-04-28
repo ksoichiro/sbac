@@ -4,7 +4,9 @@
   "dependencies": {
     "jquery": "1.11.2",
     "bootstrap": "3.3.4",
-    "components-font-awesome": "4.3.0"
+    "components-font-awesome": "4.3.0",
+    "respond-minmax": "1.4.2",
+    "html5shiv": "3.7.2"
   },
   "overrides": {
     "jquery": {
