@@ -46,7 +46,9 @@ idea {
         outputDir = file("${buildDir}/classes/main")
 
         excludeDirs += [
-                file('src/main/resources/static'),
+                file('src/main/resources/static/css'),
+                file('src/main/resources/static/js'),
+                file('src/main/resources/static/lib'),
                 file('bower_components'),
                 file('node_modules')
         ]
