@@ -25,6 +25,7 @@ gulp.task('less', function() {
     return gulp.src(paths.less.files)
         .pipe(less())
         .pipe(cssmin({root: paths.less.root}))
+        .pipe(gulpFilter(['application.css']))
         .pipe(gulp.dest(paths.dest + 'css'));
 });
 
