@@ -21,7 +21,7 @@ It's better to use nvm to manage npm version.
 ./gradlew bootRun
 ```
 
-## Depelepment
+## Development
 
 This app is developed with IntelliJ IDEA.
 
