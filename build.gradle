@@ -78,29 +78,4 @@ task encodePassword << {
 
 apply from: 'name-generator.gradle'
 
-task npmInstall(type: Exec) {
-    logging.captureStandardOutput LogLevel.INFO
-    logging.captureStandardError LogLevel.LIFECYCLE
-    inputs.files "package.json", "bower.json"
-    outputs.dir "node_modules"
-    if(Os.isFamily(Os.FAMILY_WINDOWS)) {
-        commandLine 'cmd', '/c', 'npm', 'install'
-    } else {
-        commandLine 'npm', 'install'
-    }
-}
-
-task npmBuild(dependsOn: npmInstall, type: Exec) {
-    logging.captureStandardOutput LogLevel.INFO
-    logging.captureStandardError LogLevel.INFO
-    inputs.dir "src"
-    inputs.file "gulpfile.coffee"
-    outputs.dir "dist"
-    if(Os.isFamily(Os.FAMILY_WINDOWS)) {
-        commandLine 'cmd', '/c', 'npm', 'run', 'build'
-    } else {
-        commandLine 'npm', 'run', 'build'
-    }
-}
-
 defaultTasks 'clean', 'build'
