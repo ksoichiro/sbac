@@ -33,7 +33,7 @@ public class LoginService implements UserDetailsService {
         }
         User user = new User(username, domainUser.getPassword(), domainUser.isEnabled(), authorities);
         user.setId(domainUser.getId());
-        user.setThemeId(domainUser.getThemeId());
+        user.setTheme(domainUser.getTheme());
         user.setCreatedAt(domainUser.getCreatedAt());
         user.setUpdatedAt(domainUser.getUpdatedAt());
         user.setRole(domainUser.getRole());

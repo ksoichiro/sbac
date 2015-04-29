@@ -1,5 +1,6 @@
 package admin.console.web;
 
+import admin.console.domain.Theme;
 import admin.console.domain.User;
 import admin.console.form.AccountSettingsUpdateThemeForm;
 import admin.console.service.ThemeService;
@@ -28,6 +29,10 @@ public class AccountSettingsController {
     public String updateTheme(@AuthenticationPrincipal User user, Model model, @Validated AccountSettingsUpdateThemeForm form, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return index(user, model, form);
+        }
+        Theme theme = themeService.findOneByName(form.getThemeName());
+        if (theme != null) {
+            user.setTheme(theme);
         }
         return "redirect:/account_settings";
     }

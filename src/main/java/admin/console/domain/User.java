@@ -24,7 +24,8 @@ public class User extends org.springframework.security.core.userdetails.User {
 
     private boolean enabled;
 
-    private Long themeId;
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Theme theme;
 
     @Column(nullable = false)
     private Long createdAt;

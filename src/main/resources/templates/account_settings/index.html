@@ -35,7 +35,7 @@
     <form th:action="@{/account_settings/update_theme}" th:object="${accountSettingsUpdateThemeForm}" method="post">
         <div class="radio" th:each="theme : ${themeList}">
             <label>
-                <input type="radio" th:value="${theme.name}" th:field="*{themeName}" />
+                <input type="radio" th:value="${theme.name}" name="themeName" id="|themeName${theme.id}|" th:checked="${theme.id == #authentication.principal.theme.id}" />
                 <span th:text="#{enum.theme.__${theme.name}__}"></span>
             </label>
         </div>

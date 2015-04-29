@@ -13,4 +13,8 @@ public class ThemeService {
     public Iterable<Theme> findAll() {
         return themeRepository.findAll();
     }
+
+    public Theme findOneByName(String name) {
+        return themeRepository.findOneByName(name);
+    }
 }
