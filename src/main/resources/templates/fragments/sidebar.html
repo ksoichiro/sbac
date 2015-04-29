@@ -18,7 +18,7 @@
 
             <li class="menu-li-statistics" data-toggle="collapse" data-target="#menu-item-statistics"
                 th:classappend="${active} == 'statistics' ? 'active collapsed' : ''">
-                <a href="javascript:void(0);" th:text="#{msg.sidebar.statistics}"><span class="arrow"></span></a>
+                <a href="javascript:void(0);" th:inline="text">[[#{msg.sidebar.statistics}]]<span class="arrow"></span></a>
             </li>
             <ul class="sub-menu collapse" th:classappend="${active} == 'statistics' ? 'in' : ''" id="menu-item-statistics">
                 <li th:class="${active2} == 'dashboard' ? 'active' : ''"><a th:href="@{/statistics/dashboard}" th:text="#{msg.sidebar.statistics.dashboard}"></a></li>
