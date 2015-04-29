@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>SBAC</title>
+</head>
+<body>
+
+<div class="nav-side-menu" th:fragment="sidebar">
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li th:class="${active} == 'home' ? 'active' : ''">
+                <a th:href="@{/}"><i class="fa fa-home fa-lg"></i><span th:text="#{msg.sidebar.home}"></span></a>
+            </li>
+
+            <li th:class="${active} == 'services' ? 'active' : ''">
+                <a th:href="@{/services}"><i class="fa fa-power-off fa-lg"></i><span th:text="#{msg.sidebar.services}"></span></a>
+            </li>
+
+            <li data-toggle="collapse" data-target="#menu-item-statistics" th:class="${active} == 'statistics' ? 'active collapsed' : ''">
+                <a href="javascript:void(0);"><i class="fa fa-bar-chart fa-lg"></i><span th:text="#{msg.sidebar.statistics}"></span><span class="arrow"></span></a>
+            </li>
+            <ul class="sub-menu collapse" th:classappend="${active} == 'statistics' ? 'in' : ''" id="menu-item-statistics">
+                <li th:class="${active2} == 'dashboard' ? 'active' : ''"><a th:href="@{/statistics/dashboard}" th:text="#{msg.sidebar.statistics.dashboard}"></a></li>
+                <li th:class="${active2} == 'logs' ? 'active' : ''"><a th:href="@{/statistics/logs}" th:text="#{msg.sidebar.statistics.logs}"></a></li>
+            </ul>
+
+            <li th:class="${active} == 'api_settings' ? 'active' : ''">
+                <a th:href="@{/api_settings}"><i class="fa fa-exchange fa-lg"></i><span th:text="#{msg.sidebar.api_settings}"></span></a>
+            </li>
+
+            <li th:class="${active} == 'roles' ? 'active' : ''">
+                <a th:href="@{/roles}"><i class="fa fa-cogs fa-lg"></i><span th:text="#{msg.sidebar.roles}"></span></a>
+            </li>
+
+            <li th:class="${active} == 'users' ? 'active' : ''">
+                <a th:href="@{/users}"><i class="fa fa-users fa-lg"></i><span th:text="#{msg.sidebar.users}"></span></a>
+            </li>
+
+            <li th:class="${active} == 'account_settings' ? 'active' : ''">
+                <a th:href="@{/account_settings}"><i class="fa fa-user fa-lg"></i><span th:text="#{msg.sidebar.account_settings}"></span></a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
