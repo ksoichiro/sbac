@@ -2,6 +2,7 @@
     // Exported:
     // @nav-border-color
     // @nav-highlight-color
+    // @nav-font-family
 
     @nav-color: #e1ffff;
     @nav-bg-color: #2e353d;
@@ -16,7 +17,7 @@
     .theme() {
         .nav-side-menu {
             overflow: auto;
-            font-family: verdana;
+            font-family: @nav-font-family;
             font-size: 12px;
             font-weight: 200;
             background-color: @nav-bg-color;
