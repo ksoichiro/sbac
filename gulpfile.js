@@ -37,21 +37,8 @@ gulp.task('coffee', function() {
 });
 
 gulp.task('bower-files', function() {
-    var filter = gulpFilter(["**/*.js", "!**/*.min.js"]);
     bowerSrc()
-        .pipe(sourcemaps.init())
-        .pipe(filter)
-        .pipe(uglify())
-        .pipe(filter.restore())
-        .pipe(sourcemaps.write("./"))
-        .pipe(gulp.dest(paths.dest + 'lib'));
-
-    filter = gulpFilter(["**/*.min.css", "fonts/*"]);
-    return bowerSrc()
-        .pipe(sourcemaps.init())
-        .pipe(filter)
-        .pipe(filter.restore())
-        .pipe(sourcemaps.write("./"))
+        .pipe(gulpFilter(["**/*.min.js", "**/*.min.css*", "**/fonts/**/*"]))
         .pipe(gulp.dest(paths.dest + 'lib'));
 });
 
