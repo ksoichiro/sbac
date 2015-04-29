@@ -6,11 +6,6 @@
 #layout.global;
 
 .theme-normal {
-    @theme-main-color: #2196F3; // Blue 500
-    @theme-border-color: #1E88E5; // Blue 600
-    @theme-brand-color: #E3F2FD; // Blue 50
-    @theme-focus-color: #1976D2; // Blue 800
-    @theme-pagination-color: #337ab7;
     #bootstrap.theme;
 
     @nav-border-color: #C6FF00; // Lime A400
@@ -22,12 +17,13 @@
 }
 
 .theme-dark {
-    @theme-main-color: #424242; // Grey 700
-    @theme-border-color: #212121; // Grey 800
-    @theme-brand-color: #FAFAFA; // Grey 50
-    @theme-focus-color: #212121; // Grey 800
-    @theme-pagination-color: #E57373; // Red 300
-    #bootstrap.theme;
+    #bootstrap.theme(
+        @theme-main-color: #424242; // Grey 700
+        @theme-border-color: #212121; // Grey 800
+        @theme-brand-color: #FAFAFA; // Grey 50
+        @theme-focus-color: #212121; // Grey 800
+        @theme-pagination-color: #E57373 // Red 300
+    );
 
     @nav-border-color: #E57373; // Red 300
     @nav-highlight-color: #EF9A9A; // Red 200

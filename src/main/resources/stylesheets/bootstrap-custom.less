@@ -1,14 +1,13 @@
 @import "global.less";
 
 #bootstrap {
-    // Exported:
-    // @theme-main-color
-    // @theme-border-color
-    // @theme-brand-color
-    // @theme-focus-color
-    // @theme-pagination-color
-
-    .theme() {
+    .theme(
+        @theme-main-color: #2196F3; // Blue 500
+        @theme-border-color: #1E88E5; // Blue 600
+        @theme-brand-color: #E3F2FD; // Blue 50
+        @theme-focus-color: #1976D2; // Blue 800
+        @theme-pagination-color: #337ab7
+    ) {
         &, .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
             font-family: @global-font-family;
         }
