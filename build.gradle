@@ -103,5 +103,4 @@ task npmBuild(dependsOn: npmInstall, type: Exec) {
     }
 }
 
-task stage(dependsOn: ['clean', 'build'])
 defaultTasks 'clean', 'build'
