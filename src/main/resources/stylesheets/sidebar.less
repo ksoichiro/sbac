@@ -1,3 +1,5 @@
+@import "global.less";
+
 #sidebar {
     // Exported:
     // @nav-border-color
@@ -122,6 +124,64 @@
             li a {
                 display: block;
                 width: 100%;
+            }
+
+            .menu-li {
+                .fa() {
+                    & a:before {
+                        .fa-icon;
+                        // fa-lg
+                        font-size: (4em / 3);
+                        line-height: (3em / 4);
+                        vertical-align: -15%;
+
+                        margin: auto;
+                        width: 40px;
+                        text-align: center;
+                    }
+                }
+                &-home {
+                    & a:before {
+                        content: @fa-var-home;
+                    }
+                    .fa;
+                }
+                &-services {
+                    & a:before {
+                        content: @fa-var-power-off;
+                    }
+                    .fa;
+                }
+                &-statistics {
+                    & a:before {
+                        content: @fa-var-bar-chart;
+                    }
+                    .fa;
+                }
+                &-api_settings {
+                    & a:before {
+                        content: @fa-var-exchange;
+                    }
+                    .fa;
+                }
+                &-roles {
+                    & a:before {
+                        content: @fa-var-cogs;
+                    }
+                    .fa;
+                }
+                &-users {
+                    & a:before {
+                        content: @fa-var-users;
+                    }
+                    .fa;
+                }
+                &-account_settings {
+                    & a:before {
+                        content: @fa-var-user;
+                    }
+                    .fa;
+                }
             }
         }
 
