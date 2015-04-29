@@ -10,13 +10,19 @@
   },
   "overrides": {
     "jquery": {
-      "ignore": ["*.json"]
+      "main": "dist/*.min.*"
     },
     "bootstrap": {
-      "ignore": [
-        "js/**", "less/**", "docs/build/**",
-        "docs/examples/**", "docs/templates/**", "docs/*.html"
-      ]
+      "main": ["dist/css/*.min.css", "dist/js/*.min.js", "dist/fonts/*"]
+    },
+    "components-font-awesome": {
+      "main": ["css/*.min.css", "fonts/*"]
+    },
+    "respond-minmax": {
+      "main": "dest/*.min.js"
+    },
+    "html5shiv": {
+      "main": "dist/*.min.js"
     }
   }
 }

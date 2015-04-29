@@ -1,8 +1,6 @@
 var gulpFilter = require('gulp-filter');
-var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
-var bowerSrc = require('gulp-bower-src');
-var sourcemaps = require('gulp-sourcemaps');
+var mainBowerFiles = require('main-bower-files');
 var coffee = require('gulp-coffee');
 var less = require('gulp-less');
 var cssmin = require('gulp-minify-css');
@@ -37,8 +35,7 @@ gulp.task('coffee', function() {
 });
 
 gulp.task('bower-files', function() {
-    bowerSrc()
-        .pipe(gulpFilter(["**/*.min.js", "**/*.min.css*", "**/fonts/**/*"]))
+    gulp.src(mainBowerFiles(), { base: 'bower_components' })
         .pipe(gulp.dest(paths.dest + 'lib'));
 });
 
