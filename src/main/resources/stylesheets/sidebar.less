@@ -19,6 +19,7 @@
         @nav-width: 300px;
         @nav-li-height: 37px;
         @nav-top: 50px;
+        @nav-side-bar-top-color: #2196F3;
         @nav-dummy: 0
     ) {
         .nav-side-menu {
@@ -32,6 +33,11 @@
             width: @nav-width;
             height: 100%;
             color: @nav-color;
+
+            .spacer {
+                height: 30px;
+                background: @nav-side-bar-top-color;
+            }
 
             .toggle-btn {
                 display: none;
@@ -200,6 +206,24 @@
             @main-content-margin: 30px;
             margin: @main-content-margin;
             margin-left: @nav-width + @main-content-margin;
+        }
+
+        .corner {
+            width: 20px;
+            height: 20px;
+            background: @nav-side-bar-top-color;
+            top: -30px;
+            position: absolute;
+            margin-left: @nav-width;
+        }
+        .corner2 {
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            top: -30px;
+            position: absolute;
+            margin-left: @nav-width;
+            border-top-left-radius: 100%;
         }
 
         @media (max-width: 767px) {
