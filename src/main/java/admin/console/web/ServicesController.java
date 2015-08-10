@@ -1,5 +1,7 @@
 package admin.console.web;
 
+import admin.console.aspect.RoleRequired;
+import admin.console.constant.RoleEnum;
 import admin.console.exception.UniqueConstraintException;
 import admin.console.form.ServiceForm;
 import admin.console.service.ServiceService;
@@ -19,6 +21,7 @@ public class ServicesController {
     private ServiceService serviceService;
 
     @RequestMapping
+    @RoleRequired(role = RoleEnum.ROLE_MANAGER)
     public String index(Model model, @PageableDefault(10) Pageable pageable) {
         model.addAttribute("serviceList", serviceService.findAll(pageable));
         return "services/index";
