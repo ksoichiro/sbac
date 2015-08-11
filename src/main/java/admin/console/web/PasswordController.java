@@ -3,10 +3,10 @@ package admin.console.web;
 import admin.console.domain.User;
 import admin.console.form.PasswordUpdateForm;
 import admin.console.repository.UserRepository;
+import admin.console.security.CurrentUser;
 import admin.console.validator.PasswordMatchValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.StandardPasswordEncoder;
-import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
@@ -34,7 +34,7 @@ public class PasswordController {
     }
 
     @RequestMapping("/update")
-    public String update(@AuthenticationPrincipal User user, @Validated PasswordUpdateForm form, BindingResult bindingResult) {
+    public String update(@CurrentUser User user, @Validated PasswordUpdateForm form, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return edit(form);
         }
