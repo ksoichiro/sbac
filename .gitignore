@@ -1,5 +1,6 @@
 .gradle/
 .idea/
+!.idea/misc.xml
 build/
 *.iml
 src/main/resources/static/css/
