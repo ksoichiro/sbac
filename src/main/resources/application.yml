@@ -6,3 +6,8 @@ spring:
         cache: false
     messages:
         cache-seconds: 0
+logging:
+    level:
+        org.hibernate: INFO
+        org.hibernate.SQL: DEBUG
+        org.hibernate.type.descriptor.sql.BasicBinder: TRACE
