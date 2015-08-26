@@ -11,6 +11,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -33,7 +34,7 @@ public class ServicesController {
     }
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public String create(ServiceForm form, BindingResult bindingResult) {
+    public String create(@Validated ServiceForm form, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return newService(form);
         }
