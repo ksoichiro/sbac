@@ -1,0 +1,5 @@
+{
+  "name": "Spring Boot Admin Console",
+  "description": "Sample application powered by Spring Boot",
+  "image": "heroku/gradle"
+}
