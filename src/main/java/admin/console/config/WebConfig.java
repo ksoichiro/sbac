@@ -22,7 +22,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .addContentVersionStrategy("/css/**", "/js/**");
         registry.addResourceHandler("/**")
                 .addResourceLocations("classpath:static/")
-                .setCachePeriod(null)
+                .setCachePeriod(365 * 24 * 60 * 60)
                 .resourceChain(true)
                 .addResolver(versionResolver);
     }
